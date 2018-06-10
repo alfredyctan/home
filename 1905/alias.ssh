@@ -1,0 +1,3 @@
+alias vm1='ssh atyc@vm1'
+alias lan1='ssh atyc@lan1'
+alias dmz1='ssh atyc@dmz1'

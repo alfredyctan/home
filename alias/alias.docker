@@ -1,0 +1,62 @@
+#docker related
+alias dil='docker image ls -a'
+alias dcl='docker container ls -a'
+alias dsl='docker service ls'
+alias djl='sudo journalctl -fu docker.service'
+
+#image id
+function iid() {
+	dil --format "{{.ID}} {{.Repository}} {{.Tag}}" | grep -e $1 | cut -d " " -f 1
+}
+
+#container id
+function cid() {
+	dcl --format "{{.ID}} {{.Image}} {{.Names}}" | grep -e $1 | cut -d " " -f 1
+}
+
+#service id
+function sid() {
+	dsl --format "{{.ID}} {{.Image}} {{.Name}}" | grep -e $1 | cut -d " " -f 1
+}
+
+#remove image
+function drmi() {
+	docker image rm $(iid $1)
+} 
+
+#remove container
+function dcr() {
+	docker container rm $(cid $1)
+} 
+
+#stop container
+function dcs() {
+	docker container stop $(cid $1)
+} 
+
+#remove service
+function dsr() {
+	docker service rm $(sid $1)
+} 
+
+#execute shell
+function des() {
+	docker exec -i -t $(cid $1) /bin/bash
+} 
+
+#execute 
+function de() {
+	PATTERN=$1; shift 1;
+	docker exec -i -t $(cid $PATTERN) $*
+} 
+
+# remove dangling image
+function drdi() { 
+	docker image rm $(docker images -f dangling=true -q)
+}
+
+
+
+
+
+

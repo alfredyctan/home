@@ -1,0 +1,5 @@
+alias app='cd $SYS_APP'
+alias data='cd $SYS_DATA'
+alias log='cd $SYS_LOG'
+alias sc='cd $SYS_SCRIPT'
+alias vd='cd $SYS_VENDOR'
