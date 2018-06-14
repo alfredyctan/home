@@ -55,8 +55,19 @@ function drdi() {
 	docker image rm $(docker images -f dangling=true -q)
 }
 
-
-
-
-
-
+function dah() {
+	echo "dil  : list docker images"
+	echo "dcl  : list docker containers list"
+	echo "dsl  : list docker service"
+	echo "djl  : show dockerd journal"
+	echo "iid  : get docker image id by ID/Repository/Tag grep"
+	echo "cid  : get docker container id by ID/Image/Names grep"
+	echo "sid  : get docker service id by ID/Image/Name grep"
+	echo "drmi : remove docker image by ID/Repository/Tag grep"
+	echo "dcr  : remove docker container by ID/Image/Names grep"
+	echo "dcs  : stop docker container by ID/Image/Names grep"
+	echo "dsr  : remove docker service by ID/Image/Name grep"
+	echo "des  : execute bash in docker container by ID/Image/Names grep"
+	echo "de   : execute command in docker container by ID/Image/Names grep"
+	echo "drdi : remove dangling docker image"
+}

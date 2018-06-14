@@ -1,2 +1,5 @@
 alias h='history'
 alias ll='ls -la'
+alias ws='cd $WORKSPACE'
+alias tstr='date +%Y-%m-%d.%H%M%S'
+alias dstr='date +%Y-%m-%d'
