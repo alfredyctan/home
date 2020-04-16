@@ -5,3 +5,15 @@ alias grh='git reset --hard'
 alias gss='git stash save'
 alias gsp='git stash pop'
 alias gms='git merge --squash'
+alias gl1='git log --oneline'
+alias gl10='git log --oneline -n 10'
+alias gds='git diff --staged'
+
+gtd() {
+  if [ -n "$1" ]; then
+    git tag -d $1
+    git push origin :refs/tags/$1
+  else
+    echo "gtd <tagname>"
+  fi
+}
