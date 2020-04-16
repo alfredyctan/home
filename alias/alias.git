@@ -9,6 +9,14 @@ alias gl1='git log --oneline'
 alias gl10='git log --oneline -n 10'
 alias gds='git diff --staged'
 
+gdlt() {
+  git diff `git log --oneline | grep "next development" | head -1 | cut -d ' ' -f 1`..HEAD --name-only
+}
+
+gdltd() {
+  git diff `git log --oneline | grep "next development" | head -1 | cut -d ' ' -f 1`..HEAD
+}
+
 gtd() {
   if [ -n "$1" ]; then
     git tag -d $1
