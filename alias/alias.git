@@ -5,9 +5,9 @@ alias grh='git reset --hard'
 alias gss='git stash save'
 alias gsp='git stash pop'
 alias gms='git merge --squash'
-alias gl1="git log --pretty='format:%C(auto)%h [%as][%<|(35,trunc)%al]%d %s'"
-alias gl10="git log --pretty='format:%C(auto)%h [%as][%<|(35,trunc)%al]%d %s' -n 10"
-alias gl20="git log --pretty='format:%C(auto)%h [%as][%<|(35,trunc)%al]%d %s' -n 20"
+alias gl1="git log --graph --pretty='format:%C(auto)%h [%as][%<|(35,trunc)%al]%d %s'"
+alias gl10="git log --graph --pretty='format:%C(auto)%h [%as][%<|(35,trunc)%al]%d %s' -n 10"
+alias gl20="git log --graph --pretty='format:%C(auto)%h [%as][%<|(35,trunc)%al]%d %s' -n 20"
 alias gds='git diff --staged'
 alias gdrb='git push origin --delete'
 alias gdrt='git push origin :refs/tags/'
