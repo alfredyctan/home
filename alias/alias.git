@@ -8,6 +8,7 @@ alias gms='git merge --squash'
 alias gl1="git log --graph --pretty='format:%C(auto)%h [%as][%<|(35,trunc)%al]%d %s'"
 alias gl10="git log --graph --pretty='format:%C(auto)%h [%as][%<|(35,trunc)%al]%d %s' -n 10"
 alias gl20="git log --graph --pretty='format:%C(auto)%h [%as][%<|(35,trunc)%al]%d %s' -n 20"
+alias glch="gl1 \`gts | sort -n | tail -n 1 | cut -b 12-\`..HEAD | grep -v jenkins"
 alias gds='git diff --staged'
 alias gdrb='git push origin --delete'
 alias gdrt='git push origin :refs/tags/'
